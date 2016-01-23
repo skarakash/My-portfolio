@@ -23,7 +23,7 @@ body {
     min-width: 1200px;
 }
 
-.wrapper::after {
+.wrapper:after {
     content: '';
     display: block;
     height: 61px;
