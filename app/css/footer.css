@@ -1,0 +1,50 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f9f9f9;
+    height: 61px;
+    line-height: 61px;
+    width: 100%;
+    min-width: 1400px;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -61px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-container {
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+
+.login-button {
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    left: 205px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.login-button:visited {
+    color: #727070;
+}
+
+.login {
+    background: url(../img/locked.png) center no-repeat;
+    position: absolute;
+    left: 170px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 62px;
+    font-size: 16px;
+    color: transparent;
+}
+
+.login:hover {
+    background: url(../img/unlocked.png) center no-repeat
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,16 +16,242 @@
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sprite-stylesheet.css">
     <link rel="stylesheet" href="css/about-me.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/contact-list.css">
     <!-- modernizer -->
     <script src="bower/modernizer/modernizr.js"></script>
 </head>
+
 <body>
     <!--[if условие]> <p>Вы используете устаревший браузер.
     Пожалуйста обновите его </p> 
     <![endif]-->
 
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="" class="logo-img">
+                    <span class="logo-text">
+                      Loftcshool. От мыслителя к создателю
+                  </span>
+                </a>
+                <ul class="socials">
+                    <li class="socials-item">
+                        <a href="https://www.facebook.com/skarakash" class="socials-item-link sprite sprite-fb">
+
+                        </a>
+                    </li>
+                    <li class="socials-item">
+                        <a href="https://vk.com/serg_ka" class="socials-item-link  sprite sprite-vk">
+                        </a>
+                    </li>
+                    <li class="socials-item">
+                        <a href="https://twitter.com/serg_ka" class=" sprite sprite-tw socials-item-link">
+                        </a>
+                    </li>
+                    <li class="socials-item">
+                        <a href="https://github.com/skarakash" class=" sprite sprite-git socials-item-link">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main class="content">
+            <aside class="sidebar">
+                <ul class="menu">
+                    <li class="menu-item about-me">
+                        <a href="index.html" class="about-me active menu-item-link">
+                            <span class="menu-item-text">
+                                 Обо мне
+                             </span>
+                        </a>
+                    </li>
+                    <li class="menu-item portfolio menu-item-first">
+                        <a href="myprojects.html" class="menu-item-link">
+                            <span class="menu-item-text">
+                                 Мои работы
+                             </span>
+                        </a>
+                    </li>
+                    <li class="menu-item contacts">
+                        <a href="contactme.html" class="menu-item-link contacts">
+                            <span class="menu-item-text">
+                                 Обратная связь
+                             </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contact-list">
+                    <li class="contact-list-header">
+                        Контакты
+                    </li>
+                    <li class="contact-list-item">
+                        <a href="mailto:skarakash@outlook.com" class="contact-item-link email">
+                            <span class="name-skype">skarakash@outlook.com</span>
+                        </a>
+                    </li>
+                    <li class="contact-list-item">
+                        <a href="tel:+380938551708" class="contact-item-link phone">
+                            <span class="name-skype">+380938551708</span>
+                        </a>
+                    </li>
+                    <li class="contact-list-item">
+                        <a href="skype:skarakash" class="contact-item-link skype">
+                            <span class="name-skype">skarakash</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </aside>
+            <div class="main-content">
+                <div class="info-block">
+                    <div class="info-block-header">
+                        Основная информация
+                    </div>
+                    <div class="info-block-content">
+                        <div class="image-box">
+                            <div class="image-frame">
+                                <div class="image-wrapper">
+                                    <img src="img/avatar.png" alt="" class="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <p class="info-box-content">
+                                <span class="info-type">
+                                    Меня зовут: 
+                                </span> Сергей Каракаш
+                            </p>
+                            <p class="info-box-content">
+                                <span class="info-type">
+                                    Мой возраст: 
+                                </span> 30 лет
+                            </p>
+                            <p class="info-box-content">
+                                <span class="info-type">
+                                    Мой город: 
+                                </span> Одесса
+                            </p>
+                            <p class="info-box-content">
+                                <span class="info-type">
+                                    Моя специализация: 
+                                </span> Frontend разработка
+                            </p>
+                            <div class="tags-block">
+                                <div class="tags-block-name info-type">
+                                    Ключевые навыки:
+                                </div>
+                                <div class="tags-blcok-content">
+                                    <ul class="tag-list">
+                                        <li class="tag">
+                                            <span class="dot"></span> HTML
+                                        </li>
+                                        <li class="tag">
+                                            <span class="dot"></span>CSS</li>
+                                        <li class="tag">
+                                            <span class="dot"></span>JavaScript</li>
+                                        <li class="tag">
+                                            <span class="dot"></span>Git</li>
+                                        <li class="tag">
+                                            <span class="dot"></span>Gulp</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-header">
+                        Опыт работы
+                    </div>
+                    <div class="info-block-content">
+                        <ul class="info-items-list">
+                            <li class="info-list-item info-list-fist">
+                                <span class="where info-type">
+                                    Оператор call-центра в “MTS Ukraine PrJtSC” 
+                                </span>
+                                <span class="period">
+                                    Июнь 2007 - Ноябрь 2007
+                                </span>
+                            </li>
+                            <li class="info-list-item">
+                                <span class="where info-type">
+                                    Инженер информационного отдела УГППС «Укрпочта»
+                                </span>
+                                <span class="period">
+                                    Май 2008 - август 2011
+                                </span>
+                            </li>
+                            <li class="info-list-item">
+                                <span class="where info-type">
+                                    Аналитик "InStat Football"
+                                </span>
+                                <span class="period">
+                                    август 2011 - май 2015
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-block">
+                    <div class="info-block-header">
+                        Образование
+                    </div>
+                    <div class="info-block-content">
+                        <ul class="info-items-list">
+                            <li class="info-list-item info-list-fist school">
+                                <span class="where info-type">
+                                    Полное среднее. Виноградовская средняя школа 
+                                </span>
+                                <span class="period">
+                                    сентябрь 1992 - май 2003
+                                </span>
+                            </li>
+                            <li class="info-list-item university">
+                                <span class="where info-type">
+                                    Одесская национальная академия связи им. А.С. Попова
+                                </span>
+                                <span class="period">
+                                    Сентябрь 2003 - июнь 2008
+                                </span>
+                            </li>
+                            <li class="info-list-item courses">
+                                <span class="where info-type">
+                                    Курсы Loftschool.ru
+                                </span>
+                                <span class="period">
+                                    январь 2016 - по настоящее время
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <a href="#" class="login">
+                lor
+            </a>
+            <a href="#" class="login-button">вход</a>
+            <span>&#169 Это мой сайт. Пожалуйста, не копируйте и не воруйте его</span>
+        </div>
+    </footer>
+
     <script src="bower/jquery/jquery.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

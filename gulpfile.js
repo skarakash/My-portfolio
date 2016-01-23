@@ -10,6 +10,8 @@ gulp.task('server', function () {
     });
 });
 
+
+
 gulp.task('watch', function () {
     gulp.watch([
         'app/*.html',
