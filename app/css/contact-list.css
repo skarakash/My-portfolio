@@ -3,7 +3,7 @@
     padding: 0;
     list-style-type: none;
     width: 100%;
-	font-family: 'OpenSans-Regular';
+    font-family: 'OpenSans-Regular';
 }
 
 .contact-list-header {
@@ -13,7 +13,7 @@
     font-size: 20px;
     font-weight: 600;
     border-radius: 5px;
-    box-shadow: 0px 2px 1px 0.00px rgba(9, 9, 9, 0.17);
+    box-shadow: 0px 2px 1px 0.00px rgba(9, 9, 9, 0.07);
     text-shadow: 0px 1px 0px #e5e5ee, 0px -1px 0px #a2a0a0;
     min-height: 41px;
     height: auto;
@@ -21,6 +21,10 @@
     padding-top: 13px;
     padding-left: 27px;
     color: #d0992c;
+}
+
+.no-cssgradients .contact-list-header {
+    background: #edc575;
 }
 
 .contact-item-link {
@@ -43,12 +47,13 @@
 
 .contact-list-item:hover {
     text-decoration: underline;
-    background: #f7f0e2;
     background: -webkit-linear-gradient(top, #ffffff 0%, #f3e8d4 100%);
     background: linear-gradient(to bottom, #ffffff 0%, #f3e8d4 100%);
 }
 
-
+.no-cssgradients .contact-list-item:hover {
+    background: #f8f2e7;
+}
 
 .skype {
     content: '';
