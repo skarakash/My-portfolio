@@ -11,7 +11,7 @@
     margin-top: -61px;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .footer-container {
@@ -28,6 +28,7 @@
     left: 205px;
     font-weight: 600;
     font-size: 14px;
+    color: #727070;
 }
 
 .login-button:visited {
@@ -38,11 +39,15 @@
     background: url(../img/locked.png) center no-repeat;
     position: absolute;
     left: 170px;
+    top: 18px;
     text-decoration: none;
     font-weight: 700;
     margin-right: 62px;
     font-size: 16px;
     color: transparent;
+    content: ' ';
+    width: 24px;
+    height: 22px;
 }
 
 .login:hover {

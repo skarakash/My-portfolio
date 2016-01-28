@@ -1,5 +1,6 @@
 var gulp = require("gulp"),
-    browserSync = require("browser-sync");
+    browserSync = require("browser-sync"),
+    concatCSS = require('gulp-concat-css');
 
 gulp.task('server', function () {
     browserSync({
@@ -10,6 +11,11 @@ gulp.task('server', function () {
     });
 });
 
+gulp.task('gulp-concat-css', function () {
+    return gulp.src('app/css/**/*.css')
+        .pipe(concatCSS('style.css'))
+        .pipe(gulp.dest('app/css'));
+});
 
 
 gulp.task('watch', function () {
@@ -19,5 +25,5 @@ gulp.task('watch', function () {
         'app/css/**/*.css'
         ]).on('change', browserSync.reload);
 });
-         
+
 gulp.task('default', ['server', 'watch']);

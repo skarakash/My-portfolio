@@ -7,11 +7,9 @@ body {
     position: relative;
     width: 100%;
     min-width: 1200px;
-    background-image: url(../img/body-bkg.png);
-    background-repeat: repeat;
+    background: url(../img/body-bkg.png) no-repeat center center fixed;
     font-family: "OpenSans-Regular", sans-serif;
     color: #727070;
-    background-position: top center;
     background-size: cover;
     font-size: 14px;
 }

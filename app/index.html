@@ -11,19 +11,30 @@
     <meta name="author" content="Sergey Karakash">
     <!-- favicon.ico -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="faviconfavicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!--  bowerCSS  -->
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/sprite-stylesheet.css">
-    <link rel="stylesheet" href="css/about-me.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="css/contact-list.css">
-    <link rel="stylesheet" href="css/my-portfolio.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="fonts/fonts.css">
+
     <!-- modernizer -->
     <script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -37,7 +48,7 @@
         <div class="header">
             <div class="header-container">
                 <a href="index.html" class="logo">
-                    <img src="img/logo.png" alt="" class="logo-img">
+                    <img src="img/logo.png" alt="Loftcshool. От мыслителя к создателю" class="logo-img">
                     <span class="logo-text">
                       Loftcshool. От мыслителя к создателю
                   </span>
@@ -45,19 +56,22 @@
                 <ul class="socials">
                     <li class="socials-item">
                         <a href="https://www.facebook.com/skarakash" class="socials-item-link sprite sprite-fb">
-
+                            <span class="hide">fb</span>
                         </a>
                     </li>
                     <li class="socials-item">
                         <a href="https://vk.com/serg_ka" class="socials-item-link  sprite sprite-vk">
+                            <span class="hide">vk</span>
                         </a>
                     </li>
                     <li class="socials-item">
                         <a href="https://twitter.com/serg_ka" class=" sprite sprite-tw socials-item-link">
+                            <span class="hide">twi</span>
                         </a>
                     </li>
                     <li class="socials-item">
                         <a href="https://github.com/skarakash" class=" sprite sprite-git socials-item-link">
+                            <span class="hide">git</span>
                         </a>
                     </li>
                 </ul>
@@ -102,7 +116,7 @@
                             <span class="name-skype">+380938551708</span>
                         </a>
                     </li>
-                    <li class="contact-list-item">
+                    <li class="contact-list-item contact-third">
                         <a href="skype:skarakash" class="contact-item-link skype">
                             <span class="name-skype">skarakash</span>
                         </a>
@@ -119,7 +133,7 @@
                         <div class="image-box">
                             <div class="image-frame">
                                 <div class="image-wrapper">
-                                    <img src="img/avatar.png" alt="" class="image">
+                                    <img src="img/avatar.png" alt="avatar" class="image">
                                 </div>
                             </div>
                         </div>
@@ -244,15 +258,15 @@
     <footer class="footer">
         <div class="footer-container">
             <a href="#" class="login">
-                lor
             </a>
             <a href="#" class="login-button">вход</a>
-            <span>2016 &#169 Это мой сайт. Пожалуйста, не копируйте и не воруйте его</span>
+            <span class="footer-sign">2016 &#169 Это мой сайт. Пожалуйста, не копируйте и не воруйте его</span>
         </div>
     </footer>
 
     <script src="bower/jquery/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
 </body>
 
 </html>

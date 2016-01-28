@@ -1,3 +1,5 @@
-$(document).ready(function () {
-    console.log('this is main page');
+$(function () {
+    if (!Modernizr.input.placeholder) {
+        $('input').placeholder()
+    }
 });

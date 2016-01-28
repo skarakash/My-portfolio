@@ -16,16 +16,9 @@
     position: relative;
 }
 
-.header-container:after {
-    display: block;
-    content: url(../img/header-after.png);
-    position: absolute;
-    top: 92px;
-}
-
 .logo {
     position: absolute;
-    left: 0;
+    left: 10;
     top: 10px;
 }
 
@@ -37,12 +30,21 @@
 
 .socials {
     position: absolute;
-    top: 25px;
+    top: 23px;
     right: 0px;
     padding: 0;
     margin: 0;
+    color: transparent;
+    content: '';
 }
 
 .socials-item {
     display: inline-block;
+    content: '';
+    text-indent: -9999px;
+    margin-left: 5px;
+}
+
+.hide {
+    font-size: 0;
 }

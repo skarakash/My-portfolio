@@ -4,26 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Главная страница</title>
+    <title>Мои работы</title>
     <!-- SEO -->
     <meta name="description" content="loftschool_homework">
     <meta name="keywords" content="loftschool_homework">
     <meta name="author" content="Sergey Karakash">
     <!-- favicon.ico -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="faviconfavicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <!--  bowerCSS  -->
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/sprite-stylesheet.css">
-    <link rel="stylesheet" href="css/about-me.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="css/contact-list.css">
-    <link rel="stylesheet" href="css/my-portfolio.css">
     <!-- modernizer -->
     <script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -37,7 +47,7 @@
         <div class="header">
             <div class="header-container">
                 <a href="index.html" class="logo">
-                    <img src="img/logo.png" alt="" class="logo-img">
+                    <img src="img/logo.png" alt="Loftcshool. От мыслителя к создателю" class="logo-img">
                     <span class="logo-text">
                       Loftcshool. От мыслителя к создателю
                   </span>
@@ -45,19 +55,22 @@
                 <ul class="socials">
                     <li class="socials-item">
                         <a href="https://www.facebook.com/skarakash" class="socials-item-link sprite sprite-fb">
-
+                            <span class="hide">fb</span>
                         </a>
                     </li>
                     <li class="socials-item">
                         <a href="https://vk.com/serg_ka" class="socials-item-link  sprite sprite-vk">
+                            <span class="hide">vk</span>
                         </a>
                     </li>
                     <li class="socials-item">
                         <a href="https://twitter.com/serg_ka" class=" sprite sprite-tw socials-item-link">
+                            <span class="hide">twi</span>
                         </a>
                     </li>
                     <li class="socials-item">
                         <a href="https://github.com/skarakash" class=" sprite sprite-git socials-item-link">
+                            <span class="hide">git</span>
                         </a>
                     </li>
                 </ul>
@@ -102,7 +115,7 @@
                             <span class="name-skype">+380938551708</span>
                         </a>
                     </li>
-                    <li class="contact-list-item">
+                    <li class="contact-list-item contact-third">
                         <a href="skype:skarakash" class="contact-item-link skype">
                             <span class="name-skype">skarakash</span>
                         </a>
@@ -115,65 +128,96 @@
                         Мои работы
                     </div>
                     <div class="info-block-content">
-                        <div class="items-wrapper">
-                            <div class="project-item">
-                                <div class="project-item-img">
-                                    <img src="img/pic1.png" alt="" class="project-img">
+                        <div class="projects-item">
+                            <div class="project-img-box">
+                                <a href="#" class="project-link">
+                                    <img src="img/pic1.png" alt="a-industry.ru" class="project-img">
+                                </a>
+                                <div class="zoom-wrapper">
+                                    <a href="#" target="_blank" class="zoom-link">Посмотреть</a>
                                 </div>
-                                <div class="project-item-adress">
+                            </div>
+                            <span class="project-adress">
                                     a-industry.ru
-                                </div>
-                                <div class="project-item-descriprion">
+                                </span>
+                            <span class="project-descr">
                                     Корпоративный и в тоже время продающий сайт строительной компании a-industry.
+                                </span>
+                        </div>
+                        <div class="projects-item">
+                            <div class="project-img-box">
+                                <a href="#" class="project-link">
+                                    <img src="img/pic2.png" alt="домгазобетон.рф" class="project-img">
+                                </a>
+                                <div class="zoom-wrapper">
+                                    <a href="#" target="_blank" class="zoom-link">Посмотреть</a>
                                 </div>
                             </div>
-                            <div class="project-item">
-                                <div class="project-item-img">
-                                    <img src="img/pic2.png " alt="" class="project-img">
-                                </div>
-                                <div class="project-item-adress">
+                            <span class="project-adress">
                                     домгазобетон.рф
-                                </div>
-                                <div class="project-item-descriprion">
+                                </span>
+                            <span class="project-descr">
                                     Продающая страница для компании ledenland.
+                                </span>
+                        </div>
+                        <div class="projects-item third">
+                            <div class="project-img-box">
+                                <a href="#" class="project-link">
+                                    <img src="img/pic3.png" alt="crmconsulting.biz" class="project-img">
+                                </a>
+                                <div class="zoom-wrapper">
+                                    <a href="#" target="_blank" class="zoom-link">Посмотреть</a>
                                 </div>
                             </div>
-                            <div class="project-item third">
-                                <div class="project-item-img">
-                                    <img src="img/pic3.png" alt="" class="project-img">
-                                </div>
-                                <div class="project-item-adress">
+                            <span class="project-adress">
                                     crmconsulting.biz
-                                </div>
-                                <div class="project-item-descriprion">
+                                </span>
+                            <span class="project-descr">
                                     Лендинг компании «СRM Consulting» специализирующейся на точной настройке Битрикс24 под бизнес.
+                                </span>
+                        </div>
+                        <div class="projects-item">
+                            <div class="project-img-box">
+                                <a href="#" class="project-link">
+                                    <img src="img/pic4.png" alt="landingsloft.ru" class="project-img">
+                                </a>
+                                <div class="zoom-wrapper">
+                                    <a href="#" target="_blank" class="zoom-link">Посмотреть</a>
                                 </div>
                             </div>
-                            <div class="project-item">
-                                <div class="project-item-img">
-                                    <img src="img/pic4.png" alt="" class="project-img">
-                                </div>
-                                <div class="project-item-adress">
+                            <span class="project-adress">
                                     landingsloft.ru
-                                </div>
-                                <div class="project-item-descriprion">
-                                    Сайт по услугам разработки продающих лендингов.
+                                </span>
+                            <span class="project-descr">
+                                   Сайт по услугам разработки продающих лендингов.
+                                </span>
+                        </div>
+                        <div class="projects-item">
+                            <div class="project-img-box">
+                                <a href="#" class="project-link">
+                                    <img src="img/pic5.png" alt="yasnow.biz" class="project-img">
+                                </a>
+                                <div class="zoom-wrapper">
+                                    <a href="#" target="_blank" class="zoom-link">Посмотреть</a>
                                 </div>
                             </div>
-                            <div class="project-item">
-                                <div class="project-item-img">
-                                    <img src="img/pic5.png" alt="" class="project-img">
-                                </div>
-                                <div class="project-item-adress">
+                            <span class="project-adress">
                                     yasnow.biz
-                                </div>
-                                <div class="project-item-descriprion">
+                                </span>
+                            <span class="project-descr">
                                     Landing page по продажи франшизы снежного бизнеса.
+                                </span>
+                        </div>
+
+                        <div class="add-project">
+                            <a href="" class="link">
+                                <div class="link-box">
+                                    <a href="" class="new-project-link">
+                                        <span class="link-img"></span>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="project-item project-item third">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, aliquam.
-                            </div>
+                                <span class="link-label">Добавить проект</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -187,7 +231,6 @@
     <footer class="footer">
         <div class="footer-container">
             <a href="#" class="login">
-                lor
             </a>
             <a href="#" class="login-button">вход</a>
             <span>&#169 Это мой сайт. Пожалуйста, не копируйте и не воруйте его</span>
@@ -196,6 +239,7 @@
 
     <script src="bower/jquery/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
 </body>
 
 </html>
