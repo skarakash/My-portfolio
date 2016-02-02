@@ -39,9 +39,7 @@
 </head>
 
 <body>
-    <!--[if условие]> <p>Вы используете устаревший браузер.
-    Пожалуйста обновите его </p> 
-    <![endif]-->
+    <!--[if условие]> <p>Вы используете устаревший браузер.Пожалуйста обновите его</p><![endif]-->
 
     <div class="wrapper">
         <div class="header">
@@ -212,12 +210,41 @@
                         <div class="add-project">
                             <a href="" class="link">
                                 <div class="link-box">
-                                    <a href="" class="new-project-link">
-                                        <span class="link-img"></span>
-                                    </a>
+                                    <span class="link-img"></span>
                                 </div>
                                 <span class="link-label">Добавить проект</span>
                             </a>
+                        </div>
+
+                        <div class="add-project-popup">
+                            <div class="close-button-section">
+                                <img src="../img/x.png" alt="" class="b-close">
+                            </div>
+                            <div class="popup-form-wrapper">
+                                <form action="" class="add-project-form">
+                                    <div class="form-item-section">
+                                        <span class="form-item-lable">Название проекта</span>
+                                        <input type="text" class="form-item-input" placeholder="Введите название">
+                                    </div>
+                                    <div class="form-item-section">
+                                        <span class="form-item-lable">Картинка проекта</span>
+                                        <input type="text" class="form-item-input" placeholder="Загрузите изображение">
+                                    </div>
+                                    <div class="form-item-section">
+                                        <span class="form-item-lable">URL проекта</span>
+                                        <input type="text" class="form-item-input" placeholder="Добавьте ссылку">
+                                    </div>
+                                    <div class="form-item-section">
+                                        <span class="form-item-lable ">Описание</span>
+                                        <textarea type="text" class="form-item-input textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+                                    </div>
+                                    <div class="button-section">
+                                        <button class="add clearfix" type="submit" value="Добавить">
+                                            Добавить
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,6 +267,8 @@
     <script src="bower/jquery/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="bower/bPopup/jquery.bpopup.js"></script>
+    <script src="bower/jquery.easing/js/jquery.easing.js"></script>
 </body>
 
 </html>
