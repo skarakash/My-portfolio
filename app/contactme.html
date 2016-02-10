@@ -31,6 +31,7 @@
     <meta name="theme-color" content="#ffffff">
     <!--  bowerCSS  -->
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/fonts.css">
@@ -132,20 +133,20 @@
                     </div>
                     <div class="info-block-content">
                         <div class="form-wrapper">
-                            <form action="">
+                            <form action="" class="form">
                                 <div class="name-email-section">
                                     <div class="name-section">
                                         <span class="item-section-lable">Имя</span>
-                                        <input type="text" class="name-input" placeholder="Как к вам обращаться">
+                                        <input type="text" class="name-input input" my='right center' at='left center' qtip-content='вы не ввели имя' placeholder="Как к вам обращаться">
                                     </div>
                                     <div class="email-section">
                                         <span class="item-section-lable">E-mail</span>
-                                        <input type="text" class="email-input" placeholder="Куда мне писать">
+                                        <input type="text" class="email-input input" my='left center' at='right center' qtip-content='вы не ввели E-mail' placeholder="Куда мне писать">
                                     </div>
                                 </div>
                                 <div class="message-section">
                                     <span class="item-section-lable">Сообщение</span>
-                                    <textarea type="text" class="message-input" placeholder="Кратко в чем суть"></textarea>
+                                    <textarea type="text" class="message-input input" placeholder="Кратко в чем суть" my='right center' at='left center' qtip-content='введите текст'></textarea>
                                 </div>
                                 <div class="captcha-section">
                                     <span class="item-section-lable">
@@ -155,7 +156,7 @@
                                         КАПЧА!
                                     </div>
                                     <div class="code-enter-block">
-                                        <input type="text" class="code-enter-area" placeholder="Введите код">
+                                        <input type="text" class="code-enter-area input" placeholder="Введите код" my='left center' at='right center' qtip-content='введите код'>
                                     </div>
                                 </div>
                                 <div class="buttons-section">
@@ -187,10 +188,13 @@
     </footer>
 
     <script src="bower/jquery/jquery.js"></script>
-    <script src="js/main.js"></script>
+
     <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="bower/bPopup/jquery.bpopup.js"></script>
     <script src="bower/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower/qtip2/jquery.qtip.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>

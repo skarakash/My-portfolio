@@ -31,6 +31,7 @@
     <meta name="theme-color" content="#ffffff">
     <!--  bowerCSS  -->
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/fonts.css">
@@ -221,22 +222,28 @@
                                 <img src="../img/x.png" alt="" class="b-close">
                             </div>
                             <div class="popup-form-wrapper">
-                                <form action="" class="add-project-form">
+                                <form action="" class="add-project-form form" name="add_project_form">
                                     <div class="form-item-section">
                                         <span class="form-item-lable">Название проекта</span>
-                                        <input type="text" class="form-item-input" placeholder="Введите название">
+                                        <input id="projectname" type="text" class="form-item-input input" my='right center' at='left center' placeholder="Введите название" name="projectname" qtip-content='введите название'>
                                     </div>
-                                    <div class="form-item-section">
-                                        <span class="form-item-lable">Картинка проекта</span>
-                                        <input type="text" class="form-item-input" placeholder="Загрузите изображение">
+                                    <div class="form-item-section img-section">
+                                        <label class="label-unload-file" for="unload-file">
+                                            <span class="form-item-lable img-section-lable">Картинка проекта</span>
+                                            <span class="label-unload-file-img">icon-unload-file</span>
+                                            <input class="unload-file input" id="unload-file" type="file" name="project-image">
+                                        </label>
+
+
+
                                     </div>
-                                    <div class="form-item-section">
+                                    <div class="form-item-section url-project-section">
                                         <span class="form-item-lable">URL проекта</span>
-                                        <input type="text" class="form-item-input" placeholder="Добавьте ссылку">
+                                        <input type="text" id="project-url" class="form-item-input input" my='right center' at='left center' placeholder="Добавьте ссылку" name="project-url" qtip-content='введите URL'>
                                     </div>
                                     <div class="form-item-section">
                                         <span class="form-item-lable ">Описание</span>
-                                        <textarea type="text" class="form-item-input textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+                                        <textarea id="project-description" class="form-item-input textarea input" my='right center' at='left center' placeholder="Пара слов о Вашем проекте" name="project-description" qtip-content='введите описание'></textarea>
                                     </div>
                                     <div class="button-section">
                                         <button class="add clearfix" type="submit" value="Добавить">
@@ -265,10 +272,13 @@
     </footer>
 
     <script src="bower/jquery/jquery.js"></script>
-    <script src="js/main.js"></script>
+
     <script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="bower/bPopup/jquery.bpopup.js"></script>
     <script src="bower/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower/qtip2/jquery.qtip.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
