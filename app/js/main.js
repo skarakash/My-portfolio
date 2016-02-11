@@ -19,12 +19,24 @@ $(document).ready(function () {
             console.log('module is running');
         };
 
+        var popup1
+
+
         // setting up the event listeners
         var _setUpListeners = function () {
             $('.link').on('click', function (ev) {
                 ev.preventDefault();
-                _showPopUp();
+                popup1 = $('.add-project-popup').bPopup({
+                    easing: 'easeOutBack',
+                    speed: 450,
+                    transition: 'slideDown',
+                    escClose: true,
+                    onClose: function () {
+                        $('.add-project-form').trigger('reset');
+                    }
+                });
             });
+
             $('.form').on('submit', function (ev) {
                 ev.preventDefault();
                 _validate();
@@ -33,30 +45,17 @@ $(document).ready(function () {
         };
 
 
-        // starting pop up form
-        var _showPopUp = function () {
-            $('.add-project-popup').bPopup({
-                easing: 'easeOutBack',
-                speed: 450,
-                transition: 'slideDown',
-                onClose: function () {
-                    $('.add-project-form').trigger('reset');
-                    $('.input')
-                        .removeClass('error')
-                        .removeClass('success')
-                        .qtip("destroy", true);
-                }
-            });
-        };
-
         // runs form validation process
         var _validate = function () {
             var form = $('form');
             var inputs = form.find('input, textarea').not('input[type="file"]');
+            var valid = true;
             inputs.each(function (index, element) {
                 if (($(element).val()).length === 0) {
-                    console.log('EMPTY INPUT');
                     _createToolTip($(element));
+                    if ((form.find('.error-message-box')).length) {
+                        form.find('.error-message-box').show()
+                    };
                     $(element).addClass('error');
                     $(element).on('keypress', function () {
                         $(element)
@@ -64,14 +63,29 @@ $(document).ready(function () {
                             .addClass('success')
                             .qtip("destroy", true);
                     });
-
+                    valid = false;
                 } else {
                     $(element).addClass('success')
                         .qtip("destroy", true);
-                    console.log('NOT EMPTY INPUT');
                 }
             });
+            if (valid) {
+                var _successMessage = $('.success-message').bPopup({
+                    easing: 'easeOutBack',
+                    speed: 450,
+                    transition: 'slideDown',
+                    escClose: true,
+                    onOpen: function () {
+                        popup1.close();
+                    }
+                });
+
+            };
+            return valid;
         };
+
+
+
 
         // creates  qtup tooltips 
         var _createToolTip = function () {
@@ -104,6 +118,8 @@ $(document).ready(function () {
             var form = $('form');
             var inputs = form.find('input, textarea').not('input[type="file"]');
             inputs.each(function (i, e) {
+                form.find('.error-message-box').hide();
+                form.find('.success-message-box').hide();
                 $(e).removeClass('error')
                     .removeClass('success')
                     .qtip("destroy", true);
