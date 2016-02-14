@@ -19,7 +19,7 @@ $(document).ready(function () {
             console.log('module is running');
         };
 
-        var popup1
+        var popup1;
 
 
         // setting up the event listeners
@@ -33,6 +33,7 @@ $(document).ready(function () {
                     escClose: true,
                     onClose: function () {
                         $('.add-project-form').trigger('reset');
+
                     }
                 });
             });
@@ -48,16 +49,24 @@ $(document).ready(function () {
         // runs form validation process
         var _validate = function () {
             var form = $('form');
-            var inputs = form.find('input, textarea').not('input[type="file"]');
+            var inputs = form.find('input, textarea');
             var valid = true;
             inputs.each(function (index, element) {
-                if (($(element).val()).length === 0) {
+                //                if (($(element).val()).length === 0)
+
+                if ($(element).val() === '') {
                     _createToolTip($(element));
                     if ((form.find('.error-message-box')).length) {
                         form.find('.error-message-box').show()
                     };
                     $(element).addClass('error');
                     $(element).on('keypress', function () {
+                        $(element)
+                            .removeClass('error')
+                            .addClass('success')
+                            .qtip("destroy", true);
+                    });
+                    $(element).on('change', function () {
                         $(element)
                             .removeClass('error')
                             .addClass('success')
@@ -70,14 +79,12 @@ $(document).ready(function () {
                 }
             });
             if (valid) {
+                popup1.close();
                 var _successMessage = $('.success-message').bPopup({
                     easing: 'easeOutBack',
                     speed: 450,
                     transition: 'slideDown',
                     escClose: true,
-                    onOpen: function () {
-                        popup1.close();
-                    }
                 });
 
             };
@@ -90,7 +97,7 @@ $(document).ready(function () {
         // creates  qtup tooltips 
         var _createToolTip = function () {
             var form = $('form');
-            var inputs = form.find('input, textarea').not('input[type="file"]');
+            var inputs = form.find('input, textarea');
             inputs.each(function (i, e) {
                 if (($(e).val()).length === 0) {
                     $(e).qtip({
@@ -116,16 +123,30 @@ $(document).ready(function () {
         // cleares/resettes the form
         var _clearForm = function () {
             var form = $('form');
-            var inputs = form.find('input, textarea').not('input[type="file"]');
+            var inputs = form.find('input, textarea');
             inputs.each(function (i, e) {
                 form.find('.error-message-box').hide();
                 form.find('.success-message-box').hide();
                 $(e).removeClass('error')
                     .removeClass('success')
                     .qtip("destroy", true);
+                $('.fake-placeholder').text('Загрузите изображение');
                 console.log('form is cleared')
             });
         };
+
+
+        // creates uploaded file name appearing in input
+        $('input[type="file"]').on('change', function () {
+            var file = ($('input[type="file"]')).val();
+            var fileName = file.split('\\');
+            fileName = fileName[fileName.length - 1];
+            $('.fake-placeholder').text(fileName);
+            console.log(fileName);
+        });
+
+
+
 
 
         return {

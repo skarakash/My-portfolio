@@ -1008,53 +1008,36 @@ body {
             top: 32px;
             left: -105px;
         }
+        /**/
         
-        .tooltip {
-            box-shadow: 0px 2px 1px 0.00px rgba(9, 9, 9, 0.17);
-            background: -webkit-gradient(linear, 0 0, 111 10.125, color-stop(0.054, #f2a085), to(#e38b6d));
-            background: -webkit-linear-gradient(354.7881188297793deg, #f2a085 5.4%, #e38b6d);
-            background: -moz-linear-gradient(354.7881188297793deg, #f2a085 5.4%, #e38b6d);
-            background: -o-linear-gradient(354.7881188297793deg, #f2a085 5.4%, #e38b6d);
-            background: linear-gradient(95.21188117022069deg, #f2a085 5.4%, #e38b6d);
-            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2a085, endColorstr=#e38b6d)";
-            font-size: 12px;
-            font-weight: 600;
-            padding: 7px 10px;
-            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
-            color: #9a4e32;
-            border-radius: 5px;
-            position: relative;
-        }
-        
-        .tooltip:after {
-            background-image: url(../img/tooltip-after.png);
-            background-repeat: no-repeat;
+        .fake-placeholder {
             position: absolute;
-            top: 10px;
-            right: -7px;
-            height: 10px;
-            width: 7px;
-            content: '';
+            top: 40px;
+            color: #A9A9A9;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
-        .tooltip-wrapper {
-            display: none;
+        .form-img {
             position: absolute;
-            top: 38px;
-            left: -139px;
+            right: 1px;
+            height: 27px;
+            width: 50px;
+            padding-top: 10px;
+            padding-left: 12px;
+            border-radius: 0px 2px 2px 0px;
+            border-left: 1px solid #bebebe;
+            background-color: #e7e7e7;
+            background: url(../img/iCloud-down.png) center center no-repeat;
         }
         
-        .tooltip-img {
-            left: -107px;
-        }
-        
-        .tooltip-url {
-            left: -128px;
-        }
-        
-        .tooltip-description {
-            top: 74px;
-            left: -135px;
+        .input-img {
+            top: 36px;
+            right: 322px;
+            opacity: 0;
+            position: absolute;
+            overflow: hidden;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
         }
 .sprite {
     background-image: url(../img/spritesheet.png);

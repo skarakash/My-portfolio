@@ -220,7 +220,7 @@
 
                         <div class="add-project-popup">
                             <div class="close-button-section">
-                                <img src="../img/x.png" alt="" class="b-close">
+                                <img src="img/x.png" src=a lt="" class="b-close">
                             </div>
                             <div class="popup-form-wrapper">
                                 <form action="" class="add-project-form form" name="add_project_form">
@@ -232,16 +232,23 @@
                                         <span class="form-item-lable">Название проекта</span>
                                         <input id="projectname" type="text" class="form-item-input input" my='right center' at='left center' placeholder="Введите название" name="projectname" qtip-content='введите название'>
                                     </div>
-                                    <div class="form-item-section img-section">
-                                        <label class="label-unload-file" for="unload-file">
-                                            <span class="form-item-lable img-section-lable">Картинка проекта</span>
-                                            <span class="label-unload-file-img">icon-unload-file</span>
-                                            <input class="unload-file input" id="unload-file" type="file" name="project-image">
-                                        </label>
 
 
 
+                                    <div class="form-item-section">
+                                        <span class="form-item-lable">Картинка проекта</span>
+                                        <div class="fake-file-input form-item-input">
+                                            <span class="fake-placeholder">Загрузите изображение</span>
+                                            <label for="add-project-img">
+                                                <span class="form-img"></span>
+                                            </label>
+                                        </div>
+                                        <input id="add-project-img" class="input-img input" name="add-project-img" type="file" accept="image/jpeg,image/png,image/gif" my='right center' at='right center' qtip-content='выберите картинку' />
                                     </div>
+
+
+
+
                                     <div class="form-item-section url-project-section">
                                         <span class="form-item-lable">URL проекта</span>
                                         <input type="text" id="project-url" class="form-item-input input" my='right center' at='left center' placeholder="Добавьте ссылку" name="project-url" qtip-content='введите URL'>
@@ -261,7 +268,7 @@
 
                         <div class="success-message">
                             <div class="close-button-section">
-                                <img src="../img/x.png" alt="" class="b-close">
+                                <img src="img/x.png" alt="" class="b-close">
                             </div>
                             <div class="success-message-box">
                                 <div class="success-message-wrapper">
