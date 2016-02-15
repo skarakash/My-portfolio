@@ -16,7 +16,6 @@ $(document).ready(function () {
         // module initialization
         var init = function () {
             _setUpListeners();
-            console.log('module is running');
         };
 
         var popup1;
@@ -33,7 +32,6 @@ $(document).ready(function () {
                     escClose: true,
                     onClose: function () {
                         $('.add-project-form').trigger('reset');
-
                     }
                 });
             });
@@ -52,10 +50,8 @@ $(document).ready(function () {
             var inputs = form.find('input, textarea');
             var valid = true;
             inputs.each(function (index, element) {
-                //                if (($(element).val()).length === 0)
-
                 if ($(element).val() === '') {
-                    _createToolTip($(element));
+                    $(element).siblings('.tooltip').show();
                     if ((form.find('.error-message-box')).length) {
                         form.find('.error-message-box').show()
                     };
@@ -64,18 +60,18 @@ $(document).ready(function () {
                         $(element)
                             .removeClass('error')
                             .addClass('success')
-                            .qtip("destroy", true);
+                            .siblings('.tooltip').hide();
                     });
                     $(element).on('change', function () {
                         $(element)
                             .removeClass('error')
                             .addClass('success')
-                            .qtip("destroy", true);
+                            .siblings('.tooltip').hide();
                     });
                     valid = false;
                 } else {
                     $(element).addClass('success')
-                        .qtip("destroy", true);
+                        .siblings('.tooltip').hide();
                 }
             });
             if (valid) {
@@ -86,7 +82,6 @@ $(document).ready(function () {
                     transition: 'slideDown',
                     escClose: true,
                 });
-
             };
             return valid;
         };
@@ -94,30 +89,7 @@ $(document).ready(function () {
 
 
 
-        // creates  qtup tooltips 
-        var _createToolTip = function () {
-            var form = $('form');
-            var inputs = form.find('input, textarea');
-            inputs.each(function (i, e) {
-                if (($(e).val()).length === 0) {
-                    $(e).qtip({
-                        content: $(e).attr('qtip-content'),
-                        position: {
-                            my: $(e).attr('my'),
-                            at: $(e).attr('at'),
-                            target: $(e)
-                        },
-                        show: true,
-                        style: {
-                            classes: 'qtip-mystyle'
-                        },
-                        hide: {
-                            event: 'keydown'
-                        }
-                    });
-                };
-            });
-        };
+
 
 
         // cleares/resettes the form
@@ -129,20 +101,19 @@ $(document).ready(function () {
                 form.find('.success-message-box').hide();
                 $(e).removeClass('error')
                     .removeClass('success')
-                    .qtip("destroy", true);
+                    .siblings('.tooltip').css('display', 'none');
                 $('.fake-placeholder').text('Загрузите изображение');
-                console.log('form is cleared')
             });
         };
 
 
         // creates uploaded file name appearing in input
         $('input[type="file"]').on('change', function () {
+            $('input[type="file"]').siblings('.tooltip').css('display', 'none');
             var file = ($('input[type="file"]')).val();
             var fileName = file.split('\\');
             fileName = fileName[fileName.length - 1];
             $('.fake-placeholder').text(fileName);
-            console.log(fileName);
         });
 
 

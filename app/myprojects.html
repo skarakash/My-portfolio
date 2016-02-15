@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <!--[if условие]> <p>Вы используете устаревший браузер.Пожалуйста обновите его</p><![endif]-->
+    <!--[if условие]>Вы используете устаревший браузер.Пожалуйста обновите его<![endif]-->
 
     <div class="wrapper">
         <div class="header">
@@ -230,7 +230,10 @@
                                     </div>
                                     <div class="form-item-section">
                                         <span class="form-item-lable">Название проекта</span>
-                                        <input id="projectname" type="text" class="form-item-input input" my='right center' at='left center' placeholder="Введите название" name="projectname" qtip-content='введите название'>
+                                        <input id="projectname" type="text" class="form-item-input input" placeholder="Введите название" name="projectname">
+                                        <div class="tooltip ">
+                                            <span class="tooltip-lable">введите название</span>
+                                        </div>
                                     </div>
 
 
@@ -243,19 +246,28 @@
                                                 <span class="form-img"></span>
                                             </label>
                                         </div>
-                                        <input id="add-project-img" class="input-img input" name="add-project-img" type="file" accept="image/jpeg,image/png,image/gif" my='right center' at='right center' qtip-content='выберите картинку' />
+                                        <input id="add-project-img" class="input-img input" name="add-project-img" type="file" accept="image/jpeg,image/png,image/gif">
+                                        <div class="tooltip tooltip-img">
+                                            <span class="tooltip-lable tooltip-lable-img">изображение</span>
+                                        </div>
                                     </div>
-
 
 
 
                                     <div class="form-item-section url-project-section">
                                         <span class="form-item-lable">URL проекта</span>
-                                        <input type="text" id="project-url" class="form-item-input input" my='right center' at='left center' placeholder="Добавьте ссылку" name="project-url" qtip-content='введите URL'>
+                                        <input type="text" id="project-url" class="form-item-input input" placeholder="Добавьте ссылку" name="project-url">
+                                        <div class="tooltip">
+                                            <span class="tooltip-lable">ссылка на проект</span>
+                                            <span class="tooltip-arrow"></span>
+                                        </div>
                                     </div>
                                     <div class="form-item-section">
                                         <span class="form-item-lable ">Описание</span>
-                                        <textarea id="project-description" class="form-item-input textarea input" my='right center' at='left center' placeholder="Пара слов о Вашем проекте" name="project-description" qtip-content='введите описание'></textarea>
+                                        <textarea id="project-description" class="form-item-input textarea input" placeholder="Пара слов о Вашем проекте" name="project-description"></textarea>
+                                        <div class="tooltip tooltip-description">
+                                            <span class="tooltip-lable  tooltip-lable-description">описание</span>
+                                        </div>
                                     </div>
                                     <div class="button-section">
                                         <button class="add clearfix" type="submit" value="Добавить">

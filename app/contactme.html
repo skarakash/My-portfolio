@@ -41,9 +41,7 @@
 </head>
 
 <body>
-    <!--[if условие]> <p>Вы используете устаревший браузер.
-    Пожалуйста обновите его </p> 
-    <![endif]-->
+    <!--[if условие]>Вы используете устаревший браузер.Пожалуйста обновите его<![endif]-->
 
     <div class="wrapper">
         <div class="header">
@@ -137,16 +135,25 @@
                                 <div class="name-email-section">
                                     <div class="name-section">
                                         <span class="item-section-lable">Имя</span>
-                                        <input type="text" class="name-input input" my='right center' at='left center' qtip-content='вы не ввели имя' placeholder="Как к вам обращаться">
+                                        <input type="text" class="name-input input" placeholder="Как к вам обращаться">
+                                        <div class="tooltip tooltip-name">
+                                            <span class="tooltip-lable tooltip-lable-name">введите имя</span>
+                                        </div>
                                     </div>
                                     <div class="email-section">
                                         <span class="item-section-lable">E-mail</span>
-                                        <input type="text" class="email-input input" my='left center' at='right center' qtip-content='вы не ввели E-mail' placeholder="Куда мне писать">
+                                        <input type="text" class="email-input input" placeholder="Куда мне писать">
+                                        <div class="tooltip tooltip-email">
+                                            <span class="tooltip-lable tooltip-lable-email">введите e-mail</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="message-section">
                                     <span class="item-section-lable">Сообщение</span>
-                                    <textarea type="text" class="message-input input" placeholder="Кратко в чем суть" my='right center' at='left center' qtip-content='введите текст'></textarea>
+                                    <textarea type="text" class="message-input input" placeholder="Кратко в чем суть"></textarea>
+                                    <div class="tooltip tooltip-question">
+                                        <span class="tooltip-lable tooltip-lable-question">ваш вопрос</span>
+                                    </div>
                                 </div>
                                 <div class="captcha-section">
                                     <span class="item-section-lable">
@@ -156,7 +163,10 @@
                                         КАПЧА!
                                     </div>
                                     <div class="code-enter-block">
-                                        <input type="text" class="code-enter-area input" placeholder="Введите код" my='left center' at='right center' qtip-content='введите код'>
+                                        <input type="text" class="code-enter-area input" placeholder="Введите код">
+                                        <div class="tooltip tooltip-capcha">
+                                            <span class="tooltip-lable tooltip-lable-capcha">код капчи</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="buttons-section">
